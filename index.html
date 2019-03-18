@@ -51,7 +51,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   GitHub Repository: https://github.com/MichaelMure/WalletGenerator.net
   -->
 
-  <title>WalletGenerator.net - Universal Paper wallet generator for Bitcoin and other cryptocurrencies</title>
+  <title>WalletGenerator.net - Lynx paper wallet generator</title>
 
   <script type="text/javascript">
 // Array.prototype.map function is in the public domain.
@@ -10533,10 +10533,8 @@ janin.currency = {
 
 janin.currencies = [
     //                              name, networkVersion, privateKeyPrefix, WIF_Start, CWIF_Start, donate
-    janin.currency.createCurrency ("Bitcoin",             0x00, 0x80, "5",    "[LK]" , "15DHZzv7eBUwss77qczZiL3DUEZLjDYhbM"),
     janin.currency.createCurrency ("Lynx",                0x2d, 0xad, "6",    "S"    , "KAaaYX5rXaSJstmszDEJgxAYjx655CctoE"),
-    janin.currency.createCurrency ("Testnet Bitcoin",     0x6f, 0xef, "9",    "c"    , null),
-    janin.currency.createCurrency ("Testnet Dogecoin",    0x71, 0xf1, "9",    "c"    , null)
+    janin.currency.createCurrency ("Lynx Testnet",    	  0x6f, 0xef, "9",    "c"    , "ms2Q1NbYsqinfqQKbBCLasg5XFBrbRjbPx")
                    ];
 
   </script>
@@ -11232,7 +11230,7 @@ ninja.translator = {
 
 	translations: {
 		﻿"en": {
-    "defaultTitle" : "WalletGenerator.net - Universal Paper wallet generator for Bitcoin and other cryptocurrencies",
+    "defaultTitle" : "WalletGenerator.net - Lynx paper wallet generator",
     "title" : "Paper Wallet Generator",
     "bulkgeneratingaddresses": "Generating addresses... ",
     "brainalertpassphrasetooshort": "The passphrase you entered is too short.\n\n",
@@ -13295,7 +13293,7 @@ if (ninja.getQueryString()["showseedpool"] == "true" || ninja.getQueryString()["
 	document.getElementById("seedpoolarea").style.display = "block";
 }
 // change currency
-var currency = ninja.getQueryString()["currency"] || "bitcoin";
+var currency = ninja.getQueryString()["currency"] || "lynx";
 currency = currency.toLowerCase();
 for(i = 0; i < janin.currencies.length; i++) {
 	if (janin.currencies[i].name.toLowerCase() == currency)
